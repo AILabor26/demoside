@@ -22,7 +22,9 @@ class Particle {
         this.size = Math.random() * 3 + 1;
         this.speedX = Math.random() * 0.5 - 0.25;
         this.speedY = Math.random() * 0.5 - 0.25;
-        this.color = `rgba(255, 184, 0, ${Math.random() * 0.5 + 0.5})`;
+        this.color = Math.random() > 0.5 
+    ? `rgba(255, 184, 0, ${Math.random() * 0.5 + 0.5})`
+    : `rgba(26, 26, 26, ${Math.random() * 0.5 + 0.1})`;
     }
     
     update() {
